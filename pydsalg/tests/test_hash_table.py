@@ -46,5 +46,17 @@ class TestHashTable0(unittest.TestCase):
         for k, v in self.testdict0.items():
             ht0[k] = v
 
+    def test_membership(self):
+        ht0 = HashTable0()
+
+        for k in self.testdict0:
+            self.assertTrue(k not in ht0)
+
+        for k, v in self.testdict0.items():
+            ht0[k] = v
+
+        for k in self.testdict0:
+            self.assertTrue(k in ht0)
+
 if __name__ == '__main__':
     unittest.main()

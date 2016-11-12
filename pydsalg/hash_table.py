@@ -1,10 +1,3 @@
-
-def dummy_function(a):
-    return a
-
-DUMMY_GLOBAL_CONSTANT_0 = 'FOO';
-DUMMY_GLOBAL_CONSTANT_1 = 'BAR';
-
 class HashTable0:
     _ARR_DEFAULT_LENGTH = 137
     """Map strings to objects"""
@@ -37,3 +30,7 @@ class HashTable0:
             self._arr[index] = [value]
 
         self.count += 1
+
+    def __contains__(self, key):
+        index = self._hash_str_00(key)
+        return self._arr[index]
