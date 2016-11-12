@@ -10,7 +10,7 @@ help:
 	@echo "  test         Run unit tests"
 
 test:
-	python -m unittest discover -v -s $(TESTS_DIR) -p $(TESTS_FP_PREFIX)
+	@python -m unittest discover -v -s $(TESTS_DIR) -p $(TESTS_FP_PREFIX)
 
 push:
 	git push $(GITHUB_REMOTE) $(GITHUB_PUSH_BRANCHS)
